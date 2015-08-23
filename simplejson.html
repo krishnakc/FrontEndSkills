@@ -1,0 +1,76 @@
+<!-- this is a programme  -->
+<!doctype html>
+<html>
+		<head>
+			<title> arrays using index </title>
+
+		</head>
+			<body>
+					<h1> This is done using JSON. </h1>	
+					<ol id="result">
+					</ol>
+					<img src="images/kristen_stewart300.jpg" alt="kristen" title="actress" style="width:225x; height=300px;">
+					<div>
+					<table>
+						<tr>Text box1: <input type="text" title="text1" value="type yor txe here"></tr>
+						<tr>Text box2: <input type="text" title="text2" value="type yor txe here"></tr>
+
+					</table>
+					<div>
+					<script type="text/javascript"> 
+						var result= {
+					     "firstName": "PardhaSaradhi",
+					     "lastName": "Koppaka",
+					     "age": 24,
+					     "address":
+				   		 	 {
+				         "streetAddress": "11-66, masjid street, V.Madugula",
+				         "city": "VishakaPatnam",
+				         "state": "AP",
+				         "postalCode": "531027"
+					   		  },
+				    	 "phoneNumber":
+						   	[
+				         {
+				           "type": "home",
+				           "number": "212 555-1234"
+				         },
+				         {
+				           "type": "fax",
+				           "number": "646 555-4567"
+				         }
+			   				  ]
+	 			};
+	 			 document.write("The firstName :"+result.firstName+'<br>');
+	 			 document.write("The lastName :"+result.lastName+'<br>');
+	 			 document.write("The age :"+result.age+'<br>');
+	 			 document.write("The address :"+'<br>');
+	 			 document.write("The streetAddress :"+result.address.streetAddress+'<br>');
+	 			 document.write("The city :"+result.address.city+'<br>');
+	 			 document.write("The state :"+result.address.state+'<br>');
+	 			 document.write("The postalCode :"+result.address.postalCode+'<br>');
+	 			var output= "";
+ 				 for(var i=0; i< result.phoneNumber.length; i++){
+ 				 	for(key in result.phoneNumber[i]){
+ 				 		if(result.phoneNumber[i].hasOwnProperty(key)){
+ 				 			output+= '<li>' + '<a href="'+result.phoneNumber[i][key]+'">' + result.phoneNumber[i][key] +'</a>' + '</li>';
+	 			 			}
+	 			 		}
+	 			 	}
+	 			 	var show= document.getElementById("result");
+	 			 	show.innerHTML= output;
+				</script>
+				<script src="jquery.js"> </script>
+				<script type="text/javascript">
+				$(document).ready(function(){
+				$('img').attr({
+					title:'hollywood actress',
+					style:'border:2px dotted red; padding:10px;'
+				});
+				
+			});
+				
+				</script>
+
+			</body>	
+</html>			

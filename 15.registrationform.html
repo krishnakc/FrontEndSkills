@@ -1,0 +1,120 @@
+<!-- this is a simple registration form -->
+<!doctype html>
+<html>
+			<title> registration form </title>
+		<head>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function(){
+					
+					var output= {
+								
+					}
+				$("#button1").click(function(){
+					var text11= $("#text1").val();
+					var text22= $("#text2").val();
+					var text33= $("#text3").val();
+					var text44= $("#text4").val();
+					var text55= $("#text5").val();
+					var text66= $("#text6").val();
+					
+					output.firstName= text11;
+					output.lsatName= text22;
+					output.text3= text33;
+					output.text4= text44;
+					output.text5= text55;
+					output.text6= text66;
+
+					console.log(output);
+					
+					/* to alert the empty field in the form.*/
+					if($("#text1").val()==""){ 
+						alert('enter your firstName.');
+					}
+					if($("#text2").val()==""){
+						alert('enter your lastName.');
+					}
+
+					if($("#text3").val()==""){
+						alert('enter your MobileNumber.');
+					}
+
+					if($("#text4").val()==""){
+						alert('enter your Locality.');
+					}
+
+					if($("#text5").val()==""){
+						alert('enter your Address.');
+					}
+
+					if($("#text6").val()==""){
+						alert('enter your ZipCode.');
+					}
+
+				});
+				$("#text3").keypress(function(key){
+					if(key.charCode>=48 && key.charCode<=57){			/* this is the character code to allow only numbers */
+						 if($(this).val().length>9) {					/* to restrict numbers more than 10. */
+						 	alert("restricted 10 numbers only");		/* pop-ups an alert that the limit exceeded. */
+						 	return false;								/* return false is used to terminate the current process. */
+						 }
+						
+					}	else {
+						alert("enter valid phone number.");
+						return false;
+					}
+				});
+
+				$("#text3").blur(function(){
+					if($(this).val().length<=9){		/* this is used to restrict to enter more than 10 numbers.*/
+						alert("Phone Number should be 10 digits.");
+						return false;
+					}
+				});
+
+				$("#text6").keypress(function(key){
+					if(key.charCode>=48 && key.charCode<=57){
+						 if($(this).val().length>5) {
+						 	alert("restricted 6 numbers only");
+						 	return false;
+						}
+					}
+					else{
+						alert("enter valid ZipCode.");
+						return false;
+					}
+				});
+				$("#text6").blur(function(){
+					if($(this).val().length<=5){
+						alert('Entered ZipCode is less than 6 digits.');
+					}
+				}); 
+			});
+			</script>
+		</head>
+			<body>
+				<h1>Registration Form </h1>
+				
+					<table>
+						<tr>
+							<td> First Name: <input type="text" size="15" id="text1"> </td>
+							<td> Last Name: <input type="text" size="15" id="text2"> </td>
+						</tr>
+						<tr>	
+							<td> Ph.No: <input type="text" size="15" id="text3" > </td>
+							<td> Locality: <input type="text" size="15" id="text4"> </td>
+						</tr>
+						<tr>	
+							<td> Address: <input type="text" size="15" id="text5"> </td>
+							<td> Pincode: <input type="text" size="15" id="text6"> </td>
+						</tr>
+							
+						<tr>
+							<td>
+							<input type="button" value="Get Data"  id="button1">
+							</td>
+						</tr>
+					</table>	
+				<div class="details"></div>
+			</body>
+</html>

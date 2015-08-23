@@ -1,0 +1,38 @@
+<!-- this is a programme to add class to every nth child -->
+<!doctype html>
+<html>
+	<title> change the css of <p> </title>
+	<head>
+		<style type="text/css">
+			.test{
+					background-color: black;
+					color: blue;
+					font-style: italic;
+				}
+		</style>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#button1").click(function(e){
+					$("p:nth-child(2)").addClass('test');		/* here the <p> nth child is evry second child of body, div, etc. */
+				});
+			});
+		</script>
+	</head>
+		<body>
+			<p> this is JQuery. </p>
+			<p> this is JQuery. </p>
+			<p> this is JQuery. </p>
+			<div>
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+			 </div>
+			<div>
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+			 </div>
+			 <input type="button" value="Click Me" id="button1">
+		</body>
+</html>	

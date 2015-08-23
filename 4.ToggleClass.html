@@ -1,0 +1,30 @@
+<!-- this is a programme to toggle the css class on mouse over -->
+<!doctype html>
+<html>
+	<title> Toggle Class </title>
+	<head>
+		<style type="text/css">
+			.item{
+					background-color: blue;
+					color:red;
+					font-style: bold;
+			}	
+		</style>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("p").bind('mouseover mouseexit', function(e){
+					$(this).toggleClass('item');	
+				});
+			});
+		</script>
+	</head>
+		<body>
+			<div>
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+			 </div>
+			
+		</body>
+</html>	

@@ -1,0 +1,35 @@
+<!-- this is a programme to add the class to the paragraphs which were clicked. -->
+<!doctype html>
+<html>
+	<title> change the css of <p> </title>
+	<head>
+		<style type="text/css">
+			.test{
+					background-color: black;
+					color: blue;
+					font-style: italic;
+				}	
+			.item{
+					background-color: blue;
+					color:black;
+					font-style: bold;
+			}	
+		</style>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("p").click(function(){
+					$(this).addClass('item');
+				});
+			});
+		</script>
+	</head>
+		<body>
+			<div class="test">
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+			 </div>
+			
+		</body>
+</html>	

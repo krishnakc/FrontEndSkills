@@ -1,0 +1,33 @@
+<!-- this is a programme to alert the clicked tags-->
+<!doctype html>
+<html>
+	<title> alert the elements </title>
+	<head>
+		<style type="text/css">
+			.kps{
+				background-color: red;
+				color: yellow;
+				font-style: italic;
+			}
+		</style>
+		<script src="js/jquery.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function (){
+				$("div,p, span,a,li,input").bind('mousedown', function(e){
+					alert("clicked on "+this.nodeName);			/* alerts thr clicked tag with name. */
+				});
+				
+			})
+		</script>
+
+	</head>
+		<body>
+			<div id="Div1"> I am PardhaSaradhi.</div>
+			<p id="Para1">I am Pardha.</p>
+			<ol id="Ol1">
+				<li> I am Saradhi.</li>
+			</ol>
+			<input type="text" value="Click Here." id="Textbox">
+		</body>
+</html>

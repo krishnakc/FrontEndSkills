@@ -1,0 +1,26 @@
+<!-- this is a programme to display the count of the checked "check boxes" -->
+<!doctype html>
+<html>
+	<title> checkboxes. </title>
+		<head>
+			<script src="js/jquery.js"></script>
+				<script type="text/javascript">
+				 	$(document).ready(function(){
+				 		var countChecked = function() {
+					 		var output = $("input:checked").length;
+					 		$( "div" ).text( output + " checked!" );	/* displays how many check boxes are checked in div. */
+				 		};
+				 		$( "input[type=checkbox]" ).on( "click", countChecked );		/* counts the "checked" checkboxes. */
+				 	});
+				</script>
+		</head>
+			<body>
+				<input type="checkbox" name="check1" checked> one</input><br>
+				<input type="checkbox" name="check2"> two </input> <br>
+				<input type="checkbox" name="check3"> three </input> <br>
+				<input type="checkbox" name="check4"> four </input> <br>
+				<input type="checkbox" name="check5"> five </input> <br>
+				<input type="checkbox" name="check6"> six </input>
+				<div></div>
+			</body>
+</html>

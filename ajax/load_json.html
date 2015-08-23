@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<title> load JSON </title>
+		<head>
+			<script src="../jquery.js"> </script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#button1").click(function(){
+					//	$('#outputdiv').load('help.html');
+					$("#outputdiv").load("PRODUCT_JSON.json");
+					});
+				});
+			</script>
+		</head>
+		<body>
+			<input type="button" value="CLICK ME" id="button1">
+			<div id="outputdiv"> </div>
+		</body>	
+</html>		

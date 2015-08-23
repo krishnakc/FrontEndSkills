@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<title> get html </title>
+		<head>
+			<script src="../jquery.js"> </script>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$("#button1").click(function(){
+						$.get("C:/Users/Suyash Joshi/Desktop/pardha/ajax/help.html", function (data) {
+							alert("success");
+							$('#outputdiv').html(data);
+						});
+					});
+				});
+			</script>
+		</head>
+		<body>
+			<input type="button" value="CLICK ME" id="button1">
+			<div id="outputdiv"> </div>
+		</body>	
+</html>		

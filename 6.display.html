@@ -1,0 +1,28 @@
+<!-- this programme is to hide the elements which were clicked. -->
+<!doctype html>
+<html>
+	<title> Display </title>
+		<head>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$('div,p,img,:input').click(function(){
+						$(this).css({
+							"display":"none"
+						});
+					});	
+				});	
+			</script>
+		</head>
+			<body>2
+				
+			<div><img src="images/kristen_stewart300.jpg" alt="Kristen" title="The Fame Of Twilight"> <br>
+				<img src="images/cullen-family.jpg" alt="Robert Pattinson" title="The Fame Of Twilight"> <br>
+				<p> this is a JQ Programme. </p>
+			</div>	
+				<p> This is saradhi. </p>
+				<p> This is saradhi. </p>
+				<p> This is saradhi. </p>
+				<input type="button" value="Hide Elements" id="DisplayNone">
+			</body>
+</html>			

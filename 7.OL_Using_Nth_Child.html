@@ -1,0 +1,45 @@
+<!-- This is a programme to change the back-ground clor to every even <li> in <ol> -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> OL using Nth Child </title>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$("#button1").click(function(){
+					$("ol li:nth-child(even)").css("background-color", "yellow");  /*  this is the selector for selecting even <li>  */
+				});
+			});
+			</script>
+	</head>
+		<body>
+		  <ol>
+		   <li> yuiih</li>
+		   <li> yuiih</li>
+		   <li> yuiih</li>
+		   <li> yuiih</li>
+		   <li> yuiih</li>
+		   <li> tyhcghuilkjh</li>
+		 </ol>
+		 <ol>
+		   <li> yuiih</li>
+		   <li> yuiih</li>
+		   <li> yuiih</li>
+		   <li> yuiih</li>
+		   <li> yuiih</li>
+		   <li> tyhcghuilkjh</li>
+		 </ol>
+		 <ol>
+		   <li> yuiih</li>
+		   <li> yuiih</li>
+		   <li> yuiih</li>
+		   <li> yuiih</li>
+		   <li> yuiih</li>
+		   <li> tyhcghuilkjh</li>
+		 </ol>
+
+		 <input type="button" value="Clickme" id="button1">
+
+		</body>
+</html>

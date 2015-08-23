@@ -1,0 +1,33 @@
+<!-- this is a programme to hide the div which is clicked. -->
+<!doctype html>
+<html>
+	<title> Toggle Divs </title>
+	<head>
+		<style type="text/css">
+			div{
+					width: 100px;
+					height: 100px;
+					border-style: dotted;
+					border-color: #da9;
+				}	
+		</style>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#D1, #D2, #D3, #D4').click(function(){
+					$(this).toggle();				/* toggles the div to hidden state. */
+					});
+					$("#button1").click(function(e){
+						$('#D1, #D2, #D3,#D4').show();	/* shows all the hodden divs. */
+					});
+				});
+		</script>
+	</head>
+		<body>
+			<div id="D1">this is div1 </div>
+			<div id="D2">this is div2 </div>
+			<div id="D3"> this is div3 </div>
+			<div id="D4"> this is div4</div>
+			<input type="button" value="Show Hidden" id="button1">
+		</body>
+</html>		

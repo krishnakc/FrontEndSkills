@@ -1,0 +1,29 @@
+<!-- this is a programme of using attr  -->
+<!doctype html>
+<html>
+	<title> attribute selector </title>
+		<head>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#ChangeSrc").click(function(){
+						$("img").attr({									/* this attr is used here to change the source and title of the image */
+							"src" : "../04-07-2015/randy.jpg",
+							"title": "Randy Orton"
+						});
+							$(this).toggle
+
+					});	
+				});	
+			</script>
+		</head>
+			<body>
+			<div>
+				<img src="../04-07-2015/kristen_stewart300.jpg" alt="Kristen" title="The Fame Of Twilight"> <br>
+				<img src="../04-07-2015/cullen-family.jpg" alt="Robert Pattinson" title="The Fame Of Twilight"> <br>
+				<img src="../04-07-2015/bella-jacob-cullen.jpg" alt="Friends" title="The Fame Of Twilight"> <br>
+				<img src="../04-07-2015/kristen_stewart300.jpg" alt="Kristen" title="Fame Of Twilight">
+			</div>	
+				<input type="button" value="Change Source Of Images" id="ChangeSrc">
+			</body>
+</html>			

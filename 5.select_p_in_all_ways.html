@@ -1,0 +1,49 @@
+<!-- this is a programme to select <p> elements in all ways(using class, id, element). -->
+<!doctype html>
+<html>
+	<title> select p in all ways </title>
+	<head>
+		<style type="text/css">
+			.item{
+					background-color: blue;
+					color:black;
+					font-style: bold;
+			}
+			.pardha{
+					background-color: yellow;
+					color:blue;
+					font-style: italic;
+			}
+			.saradhi{
+					background-color: green;
+					color:yellow;
+					font-style: bold;
+			}	
+		</style>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#selectElement").click(function(e){ 			/* selecting paragraphs using select by elements. */
+					$('p').addClass('item');
+				});
+				$("#selectId").click(function(e){				/* selecting paragraphs using id */
+					$('#foo').addClass('pardha');
+				});
+				$("#selectClass").click(function(e){			/* selecting paragraphs using class */
+					$('.bar').addClass('saradhi');
+				});
+			});
+		</script>
+	</head>
+		<body>
+			<div>
+				<p id="foo" class="bar"> I am Pardha Saradhi. </p>
+				<p class="bar"> I am Pardha Saradhi. </p>
+				<p class="bar"> I am Pardha Saradhi. </p>
+			 </div>
+			 <input type="button" value="Click Me To Access Through ID" id="selectId">
+			 <input type="button" value="Click Me To Access Through Element" id="selectElement">
+			 <input type="button" value="Click Me To Access Through Class" id="selectClass">
+			
+		</body>
+</html>	

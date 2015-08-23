@@ -1,0 +1,25 @@
+<!-- this is a programme about unbind function. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> button click </title>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function(){
+					var output=0;
+				$("#Button1").click(function(){
+					output++;
+					if(output<=1){
+						alert("you clicked button.");
+					}
+					else{
+						$("#Button1").unbind('click');		/* here unbind is used to unbind the click event */
+					}
+				});		
+			});			    
+			</script>
+	</head>
+		<body> 
+				<input type="button" value="click me" id="Button1">
+		</body>
+</html>

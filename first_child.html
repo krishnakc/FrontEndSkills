@@ -1,0 +1,48 @@
+<!-- this is a programme about first-child and last-child. -->
+<!doctype html>
+<html>
+	<title> attribute prefix selector </title>
+		<head>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#button1").click(function(){
+						$("p:last-child").css({				/* applies this styles to the <p> last-child. */
+							"background-color":"pink",
+							"color":"blue",
+							"font-family": "Segoe Script"
+						});
+						$("p:first-child").css({			/* applies this styles to the <p> first child */
+							"background-color":"pink",
+							"color":"blue",
+							"font-family": "Segoe Script"
+						});
+						 // $("img").find("the"){
+						 // 	alert("you found this");
+						 // };
+					});	
+					});		
+			</script>
+		</head>
+			<body>
+				<div>
+					<p>
+					 <a href=""> hai</a><br>
+					 <a href="">bye</a>
+					</p>
+					<img src="images/bella-jacob-cullen.jpg" alt="Friends" title="The Fame Of Twilight"><br>
+					<img src="images/bella-jacob-cullen.jpg" alt="Friends" title="The Fame Of Twilight"> <br>
+					<img src="images/kristen_stewart300.jpg" alt="Kristen" title="Fame Of Twilight">
+				</div>	
+				<div>
+					
+					<img src="images/kristen_stewart300.jpg" alt="Kristen" title="The Fame Of Twilight"> <br>
+					<p> This is a parragraph</p>
+					<img src="images/cullen-family.jpg" alt="Robert Pattinson" title="The Fame Of Twilight"> <br>
+					<p>yuiomnhik</p>
+					
+				</div>
+				<div id="output"></div>
+				<input type="button" value="change the title" id="button1">
+			</body>
+</html>			

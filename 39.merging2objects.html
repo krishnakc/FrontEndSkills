@@ -1,0 +1,45 @@
+<!-- this is a programme of usng $.extend method. -->
+<!doctype html>
+<html>
+	<title> merging. </title>
+		<head>
+			<script src="js/jquery.js"></script>
+			 <script type="text/javascript">
+			 $(document).ready(function(){
+			 	$("#button1").click(function(){
+			 //		var newObject= $.extend({}, object1, object2, object3);
+			 		var object1={
+			 			"first-name":"pardha",
+			 			"last-name": "koppaka",
+			 			"age":24,
+			 			"village":"V.Madugula"
+			 		}
+			 		var object2={
+			 			"first-name":"chaitanya",
+			 			"last-name": "koppaka",
+			 			"age":28,
+			 			"village":"V.Madugula"
+			 		}
+			 		var object3={
+			 			"first-name":"kiran",
+			 			"last-name": "rambalaa",
+			 			"age":23,
+			 			"village":"amalapuram"
+			 		}
+			// 		console.log(newObject);
+
+				 		$.extend(object1, object2);
+				 			console.log(object1);
+				 		
+
+				 		
+			 	});
+			 });
+
+
+			 </script>
+		</head>
+			<body>
+				<input type="button" value="Click Me" id="button1">
+			</body>	 
+</html>			

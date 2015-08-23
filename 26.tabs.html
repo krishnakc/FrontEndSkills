@@ -1,0 +1,36 @@
+<!-- this is a programme of tabs. ssss-->
+<!doctype html>
+<html>
+	<title> tabs. </title>
+		<head>
+			<script src="js/jquery.js"></script>
+			<link rel="stylesheet" type="text/css" href="css/mycss.css">
+			<script type="text/javascript">
+			 	$(document).ready(function(){
+			 		$("a").on('click',function(e){
+			 			var output= $(this).attr('href');
+			 			$(output).show().siblings().hide();			/* it is used to hide the sibblings of the selected <a> tag. */
+			 			$(this).parent().addClass('active').siblings().removeClass('active');		/* adds the class "active" to the <a> tag and simultaniously removes to siblings.  */
+			 		});
+			 	});	
+			</script>
+		</head>
+			<body>
+				<div class="tabs">	
+					<ul class="tab-links">
+						<li class="active"><a href="#tab1">Tab 1</a></li>
+        				<li><a href="#tab2">Tab 2</a></li>
+        				<li><a href="#tab3">Tab 3</a></li>
+        				<li><a href="#tab4">Tab 4</a></li>
+        				<li><a href="#tab5">Tab 5</a></li>
+					</ul>
+					<div id="tab-container">
+						<div id="tab1" class="container-active"> this is a div of first tab. </div>
+						<div id="tab2" class="container">this is a div of second tab.</div>
+						<div id="tab3" class="container">this is a div of third tab.</div>
+						<div id="tab4" class="container">this is a div of fourth tab.</div>
+						<div id="tab5" class="container">this is a div of fifth tab.</div>
+					</div>
+				</dvi>	
+			</body>
+</html>

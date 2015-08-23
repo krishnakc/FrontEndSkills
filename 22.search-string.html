@@ -1,0 +1,24 @@
+<!-- this is a programme to find the string in a programme -->
+<!doctype html>
+<html>
+	<title> string search in a page. </title>
+		<head>
+			<script src="js/jquery.js"></script>
+			 <script type="text/javascript">
+			 	$(document).ready(function(){
+			 		$("#button1").click(function(){
+			 			$("p:contains('friend')").remove();		/* search the string in a para and remove that para. */
+			 		})
+			 	});
+			 </script>
+		</head>
+			<body>
+				<div>
+					i am pardha saradhi i am from madugula.
+				</div>	
+				<p>
+					i am ranjith friend of pardha sardhi.
+				</p>
+				<input type="button" value="click me" id="button1">
+			</body>	
+</html>

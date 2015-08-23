@@ -1,0 +1,42 @@
+<!-- this is a programme using 'not'.-->
+<!doctype html>
+<html>
+	<title> using Not. </title>
+	<head>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+					 $('div').not('.filtertest').css({		/* adds the css to divs which are not with class having the class "filtertest" */
+						'background-color': 'green',
+						'color': 'red',
+						'font-style': 'italic'
+					});
+				});
+		</script>
+	</head>
+		<body>
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+			<div>
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+			 </div>
+			<div class="filtertest">
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+			 </div>
+			 <div>
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+			 </div>
+			<div class="filtertest">
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+				<p> I am Pardha Saradhi. </p>
+			 </div>
+			 <!--<input type="button" value="Click Me" id="button1">-->
+		</body>
+</html>	

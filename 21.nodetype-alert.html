@@ -1,0 +1,25 @@
+<!-- this is a programme to alert the tag we clicked. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 2 buttons </title>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$('div, p, a, :input').click(function(){		
+					alert("You clicked the"+this.nodeName+ "tag.")		/* alerts the tags which are clicked in the document. */
+				});
+			});	
+		</script>	
+	</head>
+		<body> 
+			<p>i am pardha.</p>
+			<div>
+				<p>i am pardha.</p>
+				<a href=""> saradhi</a>
+				<input type="text" value="Click Me" class="text1">
+			 </div>
+			 <input type="button" value="Click Me" class="button1">
+			
+		</body>
+</html>

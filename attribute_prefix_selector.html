@@ -1,0 +1,24 @@
+<!-- this is a programme using prefix selector. -->
+<!doctype html>
+<html>
+	<title> attribute prefix selector </title>
+		<head>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("img[alt|='Friends']").css({	/* changes the css of the images which contains "friends" in the alt attribute */
+						"border": "5px solid red",
+						"padding": "5px"
+					});
+				});	
+			</script>
+		</head>
+			<body>
+			<div>
+				<img src="images/kristen_stewart300.jpg" alt="Kristen" title="The Fame Of Twilight"> <br>
+				<img src="images/cullen-family.jpg" alt="Robert Pattinson" title="The Fame Of Twilight"> <br>
+				<img src="images/bella-jacob-cullen.jpg" alt="Friends" title="The Fame Of Twilight"> <br>
+				<img src="images/kristen_stewart300.jpg" alt="Kristen" title="Fame Of Twilight">
+			</div>	
+			</body>
+</html>			

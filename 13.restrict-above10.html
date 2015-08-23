@@ -1,0 +1,19 @@
+<!-- to restrict the numbers(characters) more than 10. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> restrict above 10 </title>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$(".TextInput").keypress(function(key){
+					if((this.value.length >9))  	/* this.value.length >9 is used to restrict the numbers.(0 based index so we used "9" for 10 characters.)  */
+						return false;	
+				});
+			});			    
+			</script>
+	</head>
+		<body> 
+			PhoneNumber: <input type="text" class="TextInput">
+		</body>
+</html>			

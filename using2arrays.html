@@ -1,0 +1,25 @@
+<!-- this is a programme to alert the enterd data is in the array or not.-->
+<!doctype html>
+<html>
+	<title> using2arrays </title>
+		<head>
+			<script type="text/javascript">
+			function formdata(){
+				var myarray= ["MONDAY","TUESDAY","WEDNESDAY"];
+					var text11= document.getElementById("text1").value;
+					
+					for(i=0; i < myarray.length; i++) {			/* loops through the array. */
+						if(text11.toLowerCase() == myarray[i].toLowerCase()) {			/* changes the small letters to capital and then checks in the array. */
+							alert("available");
+						}
+					}
+
+			}
+
+			</script>
+		</head>
+			<body>
+				Input: <input type="text" size="15" id="text1">
+				<input type="button" value="Get Data" onclick="formdata()">
+			</body>
+</html>			

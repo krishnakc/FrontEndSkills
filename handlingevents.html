@@ -1,0 +1,80 @@
+<!-- this is a programme about mouseover. -->
+<!doctype html>
+<html>
+	<title> handling events </title>
+		<head>
+			<style type="text/css">
+				
+				.kps{
+					background-color: red;
+					color: yellow;
+					font-style: italic;
+				}
+				table {
+					border-style: outset;
+				}
+			</style>
+				<script src="js/jquery.js"></script>
+				<script type="text/javascript">
+				$(document).ready(function(){
+						// using hover.
+					$('#mytable tr').hover( 		/* applies the styles to the "tr" in table on hover. */
+					// mouse hover	
+						function() {
+						$(this).css('background-color', '#666');
+						},
+					// mouse leave	
+						function() {
+						$(this).css('background-color', '#111');
+						});
+
+					//	hover using toggle.
+						// $('#mytable tr').hover(function(){
+						// 	$(this).toggleClass('kps');
+						// });
+				});
+				</script>
+
+		</head>
+			<body>
+				<div id="newdiv"> There is some text. </div>
+				<form id-"form1">
+						<table id="mytable" style="width:300px">
+							<tr>
+								<td style="width=30%"> First Name </td>
+								<td><input type="text" value="pardha" size="20" id="text1"> </td>
+							</tr>
+							<tr>
+								<td style="width=30%"> Last Name </td>
+								<td><input type="text" value="saradhi" size="20" id="text2"> </td>
+							</tr>
+							<tr>
+								<td> comments </td>
+								<td> <textarea rows="8" > Text Area </textarea> </td>
+							</tr>
+							<tr>
+								<td>phone</td>
+								<td>
+									<input type="button"  value="Add Phone Number" id="button1">
+									<div class="PhonesDiv" style="margin-top:10px;">
+										<div>
+											<select id="phonetype" >
+												<option value=""> select one </option>
+												<option value="mobile"> mobile </option>
+												<option value="office"> office </option>
+											</select>
+											</div>
+											<div>
+												<input type="text" class="phonenumber" maxlength="10">
+											</div>
+									</div>
+								</td>
+								
+								<td>
+										<div id="mydiv"></div>
+								</td>
+							</tr>
+						</table>
+				</form>	
+			</body>
+</html>			

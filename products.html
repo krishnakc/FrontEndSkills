@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<title> arrays using index </title>
+		<head>
+			<style type="text/css">
+				.s331{font-style: italic;
+					border-bottom: dotted;
+					color: #eee;
+					background-color: yellow;
+					}
+			</style>
+			<script type="text/javascript" src="PRODUCT_JSON.json"> </script>
+			<link rel="stylesheet" type="text/css" href="mycss.css">
+		</head>
+
+			<body>
+				<h1> THIS IS A PRODUCT PAGE </h1>
+				<input type="text" value="pardha" size="20" onfocus="Focus(this)" id="text1">
+				<input type="text" value="saradhi" size="20" onfocus="Blur(this)" onblur="Blur(this)" id="text2">
+				<div id="mydiv">
+					<p> GET OUT FROM HERE. </p>
+				</div>
+				<div id="maindiv">	
+					
+				</div>	
+			<script type="text/javascript">
+					var products_html ;
+					for( var i=0; i< newJSON.products.length; i++ ) {
+						products_html += "<div class='line_item'><div class='image_class'> <img src ='"+newJSON.products[i].image_url+"'/></div>"+
+										"<div class='product_item"+i+"'> Item No : '"+newJSON.products[i].product_id+"'</div>"+
+									   "<div class='product_name"+i+"'> Item Name : '"+newJSON.products[i].product_name+"'</div>"+
+										"<div class='product_model_number"+i+"'> Item Model Number : '"+newJSON.products[i].model_number+"'</div></div>";
+					}
+
+					var root_elem = document.getElementById('maindiv');
+					root_elem.innerHTML = products_html;
+			</script>
+			 <script src="jquery.js"></script>
+			 <script type="text/javascript">
+				$(document).ready(function(){
+				$('div').each(function(){
+				//alert($(this).html());
+				//var divs= $('div');
+				//alert(divs.length);
+				
+				});
+			});
+				 function Focus(tb){
+				 	$(tb).addClass('s331');
+				}
+				function Blur(tb){
+					$(tb).toggleClass('s331');
+				}
+			</script>
+			</body>	

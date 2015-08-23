@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<title> inArray. </title>
+		<head>
+			<script src="js/jquery.js"></script>
+			 <script type="text/javascript">
+			 	$(document).ready(function(){
+			 		var myarray=[4, "sam", 'ram', 'par',9];
+			 		var $search=$('span');
+			 			$search.eq( 0 ).text( jQuery.inArray( 4 ) );
+						$search.eq( 1 ).text( jQuery.inArray( 4) );
+						$search.eq( 2 ).text( jQuery.inArray( "ram" ) );
+						$search.eq( 3 ).text( jQuery.inArray( 'par' ) );
+			 	});
+			 </script>
+		</head>
+			<body>
+				<div>4 found at <span></span></div>
+				<div>4 found at <span></span></div>
+				<div>"ram" found at so <span></span></div>
+				<div> par found at <span></span></div>
+				 
+			</body>
+</html>			

@@ -1,0 +1,19 @@
+<!-- this programme is to restrict the alphabets & special characters -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> restrict alphabets </title>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$(".TextInput").keypress(function(key){
+					if(key.charCode < 48 || key.charCode > 57)  /* the key code is used to restrict the specified character & special characters. */
+						return false;	
+				});
+			});			    
+			</script>
+	</head>
+		<body> 
+			PhoneNumber: <input type="text" class="TextInput">
+		</body>
+</html>			

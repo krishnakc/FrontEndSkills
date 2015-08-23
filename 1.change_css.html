@@ -1,0 +1,37 @@
+<!-- this is a programme to toggle the classes of divs. -->
+<!doctype html>
+<html>
+	<title> To Display The Selected Divs </title>
+	<head>
+		<style type="text/css">
+			.test{
+					width:  50px;
+					height: 50px;
+					border-style: dotted;
+					border-color: #da9;
+				}	
+			.item{
+					width		: 100px;
+					height		: 100px;
+					border-style: dashed;
+					border-color: #3ea;
+			}	
+		</style>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".test").click(function(){
+					$('.test').toggleClass('item');		/* here the toggle class is used to switch the classes of divs */
+				});
+			});
+		</script>
+	</head>
+		<body>
+			<div class="test" >this is div1 </div>
+			<div class="test" >this is div2 </div>
+			<div class="test" > this is div3 </div>
+			<div class="test" > this is div4</div>
+			<div> this is div5 </div>
+			<div> this is div6</div>
+		</body>
+</html>		

@@ -1,0 +1,33 @@
+<!-- this is a programme which only admin can access. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> admin </title>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$("#button1").click(function(){
+					var textoutput= $("#TextInput").val();
+					if(textoutput=='admin')					/* to check wether it is admin or not */
+					{
+						alert($("#admin").html());			/* if admin alerts this */
+					}	
+					else{
+						alert($("#notadmin").html());		/* if not admin alerts this */
+					}
+								
+				});
+			});			    
+			</script>
+	</head>
+		<body> 
+			<div id="admin">
+				 This is a admin. 
+			</div>
+			<div id="notadmin">
+				 This is a not admin. 
+			</div>
+			EnterText: <input type="text" id="TextInput">
+			<input type="button" value="Click Me" id="button1">
+		</body>
+</html>			

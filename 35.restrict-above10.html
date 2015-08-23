@@ -1,0 +1,28 @@
+<!-- this is a programme to restrict above 10 characters -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> restrict above 10 </title>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$(".TextInput").keypress(function(key){
+					var output={
+
+					}
+					if(this.value.length >9)	/* to allows only 10 characters.*/
+					{
+						 alert("LimitOver"); 	/*alertds if limit is exceeded.*/
+						 output.EnterText=$('.TextInput').val();	
+						alert(output.EnterText);	/*  shows the entered text in the textbox.*/	
+						return false;				/* ends the loop. */
+					}	
+								
+				});
+			});			    
+			</script>
+	</head>
+		<body> 
+			EnterText: <input type="text" class="TextInput">
+		</body>
+</html>			

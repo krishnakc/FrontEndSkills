@@ -1,0 +1,90 @@
+<!-- this is a programme using bind and unbind. -->
+<!doctype html>
+<html>
+	<title> bind unbind </title>
+		<head>
+		<style type="text/css">
+			.s331{ 
+				background-color: blue;
+				color: #333;
+				font-style: italic;
+				}
+			.kps{
+				background-color: red;
+				color: yellow;
+				font-style: italic;
+			}
+			table {
+				border-style: outset;
+			}
+		</style>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				$('.mynew').change(function(){
+					alert($(this).val());
+					$(this).addClass('s331');
+				});
+				$('#newdiv').bind('mousedown mouseup ', function(e){
+					 $(this).toggleClass('kps');
+					 $(this).css('cursor', 'pointer');
+					
+				});
+				wireEvents();
+			});
+				
+			function wireEvents(){
+				$('#button1').click(function(){
+					$('#newdiv').unbind('mouseover');
+				});
+
+				$('#newdiv').attr("item-id", 1);
+
+				 $("#newdiv").attr({
+				 	id: "custom-id",
+				 	class:"custom-class"
+				 });
+
+				
+			}
+		</script>
+		</head>
+			<body>
+				<div id="newdiv"> There is some text. </div>
+				<form id-"form1">
+						<table style="width:300px">
+							<tr>
+								<td style="width=30%"> First Name </td>
+								<td><input type="text" value="pardha" size="20" id="text1" class="mynew"</td>
+							</tr>
+							<tr>
+								<td style="width=30%"> Last Name </td>
+								<td><input type="text" value="saradhi" size="20" id="text2"</td>
+							</tr>
+							<tr>
+								<td> comments </td>
+								<td> <textarea rows="8" class="mynew"> Text Area </textarea> </td>
+							</tr>
+							<tr>
+								<td>
+									<select id="select1" class="mynew">
+										<option> pardha saradhi</option>
+										<option> krishna </option>
+										<option selected="true"> kiran </option>
+									</select>
+								</td>
+								
+							</tr>
+							<tr>
+								<td>
+									<input type="button"  value="click the button" id="button1">
+								</td>
+								<td>
+										<div id="mydiv"></div>
+								</td>
+							</tr>
+						</table>
+				</form>	
+			</body>
+</html>		

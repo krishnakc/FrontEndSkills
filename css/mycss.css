@@ -1,0 +1,20 @@
+.breadcrumb>li+li:before{
+	padding:0 5px;
+	color:#aef;
+	
+	}
+
+	.breadcrumb>.active
+	{
+		
+		color:#8153ea;
+	}
+	body {
+		padding-top: 70px;
+	}
+
+	.active={
+		background-color: #eee;
+		color: #eda423;
+		
+	}

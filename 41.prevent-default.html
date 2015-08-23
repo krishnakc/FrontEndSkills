@@ -1,0 +1,64 @@
+<!-- this is a programme about keyup and mouseover -->
+<!doctype html>
+<html>
+	<title> prevent default </title>
+		<head>
+			<style type="text/css">
+			.red {
+				color: red;
+			}
+			.hover-on-me {
+				font-size: 35px;
+			}
+			</style>
+			<script src="js/jquery.js"></script>
+			 <script type="text/javascript">
+			 	$(document).ready(function(){
+			 	/*$('a').click( function (event){
+			 		event.preventDefault();
+			 		alert("you clicked anchor tag.");
+			 	});
+			 		$("div").click(function(){
+			 			alert("you clicked div element.");
+			 		});
+			 		$("p").click(function(){
+			 			alert("you clicked p element.");
+			 		});*/
+			 		$(".type-here").keyup(function(){		
+			 			var text = $(this).val();			
+			 			$('.append-to-this').html(text);	/* appends the text of textbox to the div. */
+			 			
+			 		});
+
+			 		$('.hover-on-me').hover(function() {		
+			 				$(this).next().addClass("red");
+			 			}, function() {
+			 				$(this).next().removeClass("red");
+			 		});
+				 });	
+			 </script>
+		</head>
+			<body>
+				<div>
+					<p> i am pardha saadghiigfdfghjk,<br> <span style="background-color:yellow" "color:navy"> i am pardha</span> <br>uikjnbgrfghjhgfr,hugytfcvytf.
+						hgvbjhvbhbjh
+					</p>
+				</div>
+					
+					<a href="https://www.google.co.in"> google</a>
+					<input type="text" class="type-here" />
+					<div class="append-to-this"></div>
+
+					<div class='hover-on-me'>0</div>
+					<div class='hover-on-me'>1</div>
+					<div class='hover-on-me'>2</div>
+					<div class='hover-on-me'>3</div>
+					<div class='hover-on-me'>4</div>
+					<div class='hover-on-me'>5</div>
+					<div class='hover-on-me'>6</div>
+					<div class='hover-on-me'>7</div>
+					<div class='hover-on-me'>8</div>
+					<div class='hover-on-me'>9</div>
+
+			</body>	 
+</html>			

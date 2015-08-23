@@ -1,0 +1,26 @@
+<!-- this programme is about bind and unbind. -->
+<!doctype html>
+<html>
+	<title> Stop Button Click </title>
+	<head>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var output=0;
+				$("#Button1").click(function(){
+					output++;
+					if(output<=10){				/* alows you to click only 10 times */
+						alert("you clicked "+output+"times.");		/* alerts how many times you clicked */
+					}
+					else{
+						$("#Button1").unbind('click');		/* unbinds the click event. */
+					}
+				});
+				
+			});
+		</script>
+	</head>	
+		<body>
+			<input type="button" value="Click Me" id="Button1">
+		</body>
+</html>		

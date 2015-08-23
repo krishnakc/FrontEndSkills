@@ -1,0 +1,37 @@
+<!-- this is a programme creating <a> tag dynamicly. -->
+<!doctype html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <title>adding new elements</title>
+	    <style type="text/css">
+	    	.saradhi{
+	    		background-color: red;
+	    		color: yellow;
+	    	}
+	    </style>
+	    <script src="js/jquery.js"></script>
+	    <script type="text/javascript">
+
+	    </script>
+	</head>
+		<body>
+			<div>
+				<p>
+					i am pardha asardhi.
+				</p>
+			</div>
+			<div>
+				<script type="text/javascript">
+					$(document).ready(function(){
+			    		$("<a />", {				/* this is the process of creating anchor tag dynamicly. */
+			    			html:"this is a <strong>paragraph adding using jq</strong>.",
+			    			"class":"saradhi",
+			    			href:""
+			    		}).appendTo("body");
+		    		});
+		    	</script>
+			</div>	
+			
+		</body>
+</html>		    

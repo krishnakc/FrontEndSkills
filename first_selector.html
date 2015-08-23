@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<title> attribute prefix selector </title>
+		<head>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#button1").click(function(){
+						$("p img:last").attr({		/* applies this styles to the last image in <p> */
+							"item-id": 1,
+							"title": "my favorite movie"
+						});
+						
+							$("p img:first").attr({		/* applies this styles to the first image in <p> */
+								"title":"HollyWood Actress",
+								"height": "300px",
+								"width": "250px"
+							});
+						});
+					});		
+			</script>
+		</head>
+			<body>
+				<div>
+					<p>
+						<img src="images/kristen_stewart300.jpg" alt="Kristen" title="The Fame Of Twilight"> <br>
+						<img src="images/cullen-family.jpg" alt="Robert Pattinson" title="The Fame Of Twilight"> <br>
+					</p>
+					<img src="images/bella-jacob-cullen.jpg" alt="Friends" title="The Fame Of Twilight"> <br>
+					<img src="images/kristen_stewart300.jpg" alt="Kristen" title="Fame Of Twilight">
+				</div>	
+				<div>
+					<img src="images/kristen_stewart300.jpg" alt="Kristen" title="The Fame Of Twilight"> <br>
+					<img src="images/cullen-family.jpg" alt="Robert Pattinson" title="The Fame Of Twilight"> <br>
+					<img src="images/bella-jacob-cullen.jpg" alt="Friends" title="The Fame Of Twilight"> <br>
+					<img src="images/kristen_stewart300.jpg" alt="Kristen" title="Fame Of Twilight">
+				</div>
+				<input type="button" value="change the title" id="button1">
+			</body>
+</html>			

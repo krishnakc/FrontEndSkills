@@ -1,0 +1,19 @@
+<!-- this is a programme to load one programme to another. -->
+<!doctype html>
+<html>
+	<title> load html in a page. </title>
+		<head>
+			<script src="js/jquery.js"></script>
+			 <script type="text/javascript">
+			 	$('a').click(function(e){
+			 		e.preventDefault();
+			 		 $("#anchor").load($(this).attr('href'));
+			 	});
+			 </script>
+		</head>
+			<body>
+				<div>
+					<a href="C:\Users\Suyash Joshi\Desktop\JQuery\25.set-interval.html" id="anchor"> click me</a>
+				</div>
+			</body>	 
+</html>

@@ -1,0 +1,26 @@
+<!-- this is a programme to add new para to document.  -->
+<!doctype html>
+<html>
+	<title> add and remove content. </title>
+		<head>
+			<script src="js/jquery.js"></script>
+			 <script type="text/javascript">
+			 	$(document).ready(function(){
+					$("#button1").on('click', function(){
+				 		$('#display-text').before("<p> i am saradhi</p>")		/* adds a new para to the document. */
+				 	});
+
+				 	$("#button2").click(function(){
+				 		$("#display-text").empty();
+				 	});
+				});	
+			 </script>
+		</head>
+			<body>
+				<div id="display-text">
+					<p>yhvfgtyhvg</p>
+				</div>
+				<input type="button" value="Add Content" id="button1"/>
+				<input type="button" value="Delete Content" id="button2"/>
+			</body>
+</html>			

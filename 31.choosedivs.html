@@ -1,0 +1,38 @@
+<!-- this is a programme using <select> to show its content. -->
+<!doctype html>
+<html>
+	<title> show divs. </title>
+		<head>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+			 	$(document).ready(function(){
+			 		$('#select-div').change(function(){
+			       		var selecteddiv = $(this).val();
+			             	$('#div1, #div2, #div3, #div4').hide();		/*  hides all the divs. */
+			             	$('#'+selecteddiv).show();					/* shows only the divs(only one) which are selected through <select> */
+			        });
+			    });    
+		 </script>
+		</head>
+			<body>
+				<select id='select-div'>
+					<option value="">---select--- </option>
+					<option value="div1">div1 </option>
+					<option value="div2">div2 </option>
+					<option value="div3">div3 </option>
+					<option value="div4">div4 </option>
+				</select>
+				<div id="div1">
+					this is div1
+				</div>
+				<div id="div2">
+					this is div2
+				</div>
+				<div id="div3">
+					this is div3
+				</div>
+				<div id="div4">
+					this is div4
+				</div>
+			</body>
+</html>			

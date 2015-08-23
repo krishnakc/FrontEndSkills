@@ -1,0 +1,26 @@
+<!-- this is a programme to bind one event handler to a div. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> mouseover </title>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$('#mydiv').bind("mouseover", function(e){		/* bind is a event handler which executes the event on mouseover */
+					$(this).css({
+						'background-color':'red',
+						'font-color':'blue'
+					});
+				});
+			});	
+		</script>	
+	</head>
+		<body> 			
+			<div id="mydiv">
+				<p>i am pardha.</p>
+				<p>i am pardha.</p>
+				<a href=""> saradhi</a>
+				<input type="text" value="Click Me" class="text1">
+			 </div>
+		</body>
+</html>

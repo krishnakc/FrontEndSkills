@@ -1,0 +1,39 @@
+<!-- this is a programme about hibe and show using 2 buttons -->
+<!doctype html>
+<html>
+	<title> attribute prefix selector </title>
+		<head>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#button1").click(function(){			/* hides the divs in the documents. */
+						$("div").hide();
+					});	
+					$("#button2").click(function(){			/* shows the hidden divs in the document. */
+						$("div").show();
+					})
+					});		
+			</script>
+		</head>
+			<body>
+				<p> i am pardha. </p>
+				<div>
+					<p>
+					 <a href=""> hai</a><br>
+					 <a href="">bye</a>
+					</p>
+					<img src="images/bella-jacob-cullen.jpg" alt="Friends" title="The Fame Of Twilight"><br>
+					<img src="images/bella-jacob-cullen.jpg" alt="Friends" title="The Fame Of Twilight"> <br>
+					<img src="images/kristen_stewart300.jpg" alt="Kristen" title="Fame Of Twilight">
+				</div>	
+				<div>
+					<p> This is a parragraph</p>
+					<img src="images/kristen_stewart300.jpg" alt="Kristen" title="The Fame Of Twilight"> <br>
+					<p> This is a parragraph</p>
+					<img src="images/cullen-family.jpg" alt="Robert Pattinson" title="The Fame Of Twilight"> <br>
+					
+				</div>
+				<input type="button" value="Click To Hide" id="button1">
+				<input type="button" value="Click To Show" id="button2">
+			</body>
+</html>			

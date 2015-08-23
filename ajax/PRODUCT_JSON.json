@@ -1,0 +1,35 @@
+var newJSON = 
+ {
+    "products": [
+        {
+            "product_id": 12,
+            "product_name": "aviator",
+            "model_number": "SKU_002",
+            "image_url": "http://jsonlint.com/c/images/kindling.png"
+        },
+        {
+            "product_id": 13,
+            "product_name": "aviator",
+            "model_number": "SKU_003",
+            "image_url": "http://jsonlint.com/c/images/kindling.png"
+        },
+        {
+            "product_id": 14,
+            "product_name": "aviator",
+            "model_number": "SKU_004",
+            "description": "Product is genuine from manufacturer",
+            "image_url" : "http://jsonlint.com/c/images/kindling.png"
+        },
+        {
+            "product_id": 15,
+            "product_name": "aviator",
+            "model_number": "SKU_005",
+        },
+        {
+            "product_id": 16,
+            "product_name": "aviator",
+            "model_number": "SKU_006",
+            "description": "Product is genuine from manufacturer"
+        }
+    ]
+}

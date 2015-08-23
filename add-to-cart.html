@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<title> add to cart. </title>
+		<head>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("#addToCart").on("click", function(){
+						var quantity= $("#quantity").val();
+						$("#cartTop").text('Cart'+'('+quantity+')');
+					});
+					$("#quantity").change(function(){
+						var pricedisplay= $("#quantity").val()*1000;
+						$("#priceDisplay").text(pricedisplay);
+					});
+
+					$("#Apply").click(function(){
+						if($("#applyCoupon").val() == "C100"){
+							$(".final-price").text(parseInt($("#priceDisplay").text()) -100);
+						}
+						if($("#applyCoupon").val() == "C200"){
+							$(".final-price").text(parseInt($("#priceDisplay").text()) -200);
+						}
+					});
+				});
+			</script>
+		</head>
+			<body>
+				<form>
+					<div id="cartTop">Cart</div>
+					<h1 align="center">This is a Shopping Site.</h1>
+						<img src="../04-07-2015/randy.jpg" title="Randy Orton">
+						<div>
+						Qty <select id="quantity">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div>
+						<div id="priceDisplay"> 1000 </div>
+						<input type="button" value="Add To Cart" id="addToCart">
+						<div>
+			  Apply Coupon: <input type="text" size="20" id="applyCoupon">
+			  				<p class="final-price"></p>
+							<input type="button" value="Apply" id="Apply">
+						</div>
+				</form>
+			</body>
+			
+</html>			

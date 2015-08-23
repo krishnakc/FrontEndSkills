@@ -1,0 +1,34 @@
+<!-- this programme is about hide and show. -->
+<!doctype html>
+<html>
+	<title> To Display The Selected Divs </title>
+	<head>
+		<style type="text/css">
+			div{
+					width: 100px;
+					height: 100px;
+					border-style: dotted;
+					border-color: #da9;
+				}	
+		</style>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.product-item').click(function() {
+					$('.product-item').not($(this)).hide();			/* shows the selected div and simultaniously hide the sibblings. */
+				});
+				
+				$("#button1").click(function(e){
+					$('.product-item').show();			/* shows the hidden divs. */
+				});
+			});
+		</script>
+	</head>
+		<body>
+			<div class="product-item" >this is div1 </div>
+			<div class="product-item" >this is div2 </div>
+			<div class="product-item" > this is div3 </div>
+			<div class="product-item" > this is div4</div>
+			<input type="button" value="Show Hidden" id="button1">
+		</body>
+</html>		

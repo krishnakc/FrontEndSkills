@@ -1,0 +1,80 @@
+<!-- this is a registration form -->
+<!doctype html>
+<html>
+			<title> registration form </title>
+		<head>
+			<script type="text/javascript">
+						function formdata()
+						{
+						var text11= document.getElementById("text1").value;
+						var text22= document.getElementById("text2").value;
+						var text33= document.getElementById("text3").value;
+						var text44= document.getElementById("text4").value;
+						var text55= document.getElementById("text5").value;
+						var text66= document.getElementById("text6").value;
+						if(text1.value=="" || text2.value=="" || text3.value=="" || text4.value=="" || text5.value=="" || text6.value==""){		/* alerts if any fields are left blank. */ 
+								alert("Please enter all the details.");
+									}
+								else{
+									alert("All details are filled.");
+									}
+
+							  if (text33.length!=10 || isNaN(text33)) {		/* restricts alphabets and allows numbers and blocks more than 10 numbers. */
+							  	alert("The mobile number you enterd is in-valid.");
+							  	}
+							  else{
+							  	alert("The mobile number you entered is valid.");
+							  	}
+
+							  	if (text66.length!=6 || isNaN(text66)) {		/* restricts alphabets and allows numbers and blocks more than 6 numbers */
+							  	alert("The ZIP Code you had entered is in-valid.");
+							  	}
+							  else{
+							  	alert("The ZIP Code you had entered is valid.");
+							  	}
+
+					 		if(isNaN(text33) || isNaN(text66) ){	/* alerts if the textbox3 and textbox6 are valid or in-valid. */	
+					 			alert("Enter Valid Digits");
+					 			}
+							 else{
+							 	alert("Enter fields are valid.");
+							 	}
+						console.log("The first name you entered is " + text11 + "<br>");
+						console.log("The last name you entered is " + text22 + "<br>");
+						console.log("The Ph.No you entered is " + text33 + "<br>");
+						console.log("The Locality you entered is " + text44 + "<br>");
+						console.log("The Address you entered is " + text55 + "<br>");
+						console.log("The Pincode you entered is " + text66 + "<br>");
+						}
+			</script>
+		</head>
+			<body>
+				<h1>Registration Form </h1>
+				<form>
+					<table>
+						<tr>
+							<td> First Name: <input type="text" size="15" id="text1"> </td>
+							<td> Last Name: <input type="text" size="15" id="text2"> </td>
+						</tr>
+						<tr>	
+							<td> Ph.No: <input type="text" size="15" id="text3" > </td>
+							<td> Locality: <input type="text" size="15" id="text4"> </td>
+						</tr>
+						<tr>	
+							<td> Address: <input type="text" size="15" id="text5"> </td>
+							<td> Pincode: <input type="text" size="15" id="text6"> </td>
+						</tr>
+							
+						<tr>
+							<td>
+							<input type="button" value="Get Data"  onclick="formdata()">
+							</td>
+						</tr>
+					</table>	
+				</form>
+			</body>
+</html>	
+
+
+
+		

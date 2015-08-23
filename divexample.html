@@ -1,0 +1,41 @@
+<!-- this is a programme to loop the <a> tags and display. -->
+<!doctype html>
+<html>
+			<title> div example </title>
+		<head>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					var output = $('#outputdiv');
+					
+					$('div').each(function (index){
+						 output.html(output.html() + "<br/>" + index +'<br>'+ $(this).find("a").attr("href"));  /* loop <a> tags through href and display in the document. */
+					});	
+						 $('#outputdiv, #links, #mydiv' ).attr("item-id",1);
+
+
+						 
+				});
+			</script>
+		</head>	
+			<body>
+				<div id="links">
+					<a href="http://www.w3schools.com/jquery/jquery_ajax_intro.asp"> AJAX Introduction In W3Schools </a>
+					<br>
+					<a href="http://www.w3schools.com/jquery/jquery_ajax_load.asp"> Load Meathod In W3Schols </a> 
+				</div>
+				<div id="mydiv">
+					<a href="https://www.google.co.in/?gfe_rd=cr&ei=w9OTVc38NO3H8AeK7aDACQ&gws_rd=ssl"> Google </a>
+					<br>
+					<a href="https://in.yahoo.com/"> Yahoo </a> 
+				</div>
+				<div>
+					<p> yjbvyjb </p>
+					<p> yjbvyjb </p>
+					<p> yjbvyjb </p>
+					<p> yjbvyjb </p>
+				</div>
+						<input type="button" value="CLICK ME" id="button1">
+						<div id="outputdiv"> </div>
+			</body>
+</html>			

@@ -1,0 +1,26 @@
+<!-- This is to restrict above 10 characters (or) numbers. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Enter values </title>
+			<script src="js/jquery.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$(".TextInput").keypress(function(key){
+					if(this.value.length<10){
+						// confirm("enter another value.");
+					}
+					else{
+						var valToManipulate = confirm("enter another value.");
+						alert(valToManipulate);		
+						return false;
+						$(".TextInput").unbind('keypress'); 
+					}	
+				});
+			});			    
+			</script>
+	</head>
+		<body> 
+			Enter Text: <input type="text" class="TextInput">
+		</body>
+</html>
